@@ -1,0 +1,111 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #131921;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.search-box {
+  padding: 8px;
+  width: 40%;
+}
+
+.search-btn {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card button {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-content .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.category-bar {
+  background-color: #232f3e;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  color: white;
+  justify-content: center;
+}
+
+.category-bar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
