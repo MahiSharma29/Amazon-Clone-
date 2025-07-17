@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">amazon.in</div>
+    <input type="text" class="search-box" id="searchInput" placeholder="Search Amazon.in">
+    <button class="search-btn" onclick="handleSearch()">🔍</button>
+    <div class="cart">🛒 Cart (<span id="cart-count">0</span>)</div>
+  </header>
+
+  <!-- Category Bar -->
+  <div class="category-bar">
+    <a href="#">All</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Fashion</a>
+    <a href="#">Electronics</a>
+    <a href="#">Home</a>
+    <a href="#">Prime</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/af_pc_2x._CB792409181_.jpg" alt="Hero Image" class="hero-img">
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="productSection">
+    <!-- Dynamic product cards will be inserted here -->
+  </section>
+
+  <!-- Product Detail Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Product" />
+      <h2 id="modalName"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
