@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shopzon – Online Shopping</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="top">
+  <div class="logo" onclick="go('home',{cat:'All',q:''})" tabindex="0">shop<span>zon</span>.in</div>
+  <button class="hbtn hide-m" onclick="toast('Delivering across India 🇮🇳')"><small>Deliver to</small><b>📍 India 110001</b></button>
+  <form class="search" onsubmit="event.preventDefault();go('home',{q:$('#q').value.trim(),cat:$('#sc').value})">
+   <select id="sc" aria-label="Category"></select>
+   <input id="q" placeholder="Search products, brands and more" aria-label="Search">
+   <button aria-label="Search">🔍</button>
+  </form>
+  <button class="hbtn" id="acct" onclick="signIn()"></button>
+  <button class="hbtn hide-m" onclick="user?go('wish'):need(()=>go('wish'))"><small>Your</small><b>Wish List</b></button>
+  <button class="hbtn hide-m" onclick="go('orders')"><small>Returns</small><b>& Orders</b></button>
+  <button class="hbtn cartb" onclick="go('cart')" aria-label="Cart">🛒 <span class="n" id="cn">0</span> Cart</button>
+ </div>
+ <nav class="sub" id="nav"></nav>
+</header>
+<main id="app"></main>
+<footer>
+ <div class="back" onclick="scrollTo({top:0,behavior:'smooth'})">Back to top</div>
+ <div class="in">
+  <div><h5>Get to Know Us</h5><p>About shopzon</p><p>Careers</p><p>Press Releases</p></div>
+  <div><h5>Make Money with Us</h5><p>Sell on shopzon</p><p>Become an Affiliate</p></div>
+  <div><h5>Let Us Help You</h5><p>Your Account</p><p>Returns Centre</p><p>Help</p></div>
+ </div>
+ <div class="c">© 2026 shopzon.in — a demo storefront built for learning. Not affiliated with any real retailer.</div>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
